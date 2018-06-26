@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="twoBytesApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home | twoBytes</title>
+    <!--  <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://mbenford.github.io/ngTagsInput/css/ng-tags-input.min.css" />
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<!--/head-->
+
+<body>
+<ng-view></ng-view>
+    <!-- <div ng-if="!show_component" ng-include="'header.html'"></div>
+    <div ng-if="show_component" ng-include="'profile.html'"></div>
+     -->
+    <div ng-include="'mail.html'"></div>
+    <div ng-include="'footer.html'"></div>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular_route.min.js"></script>
+    <script src="js/angular_cookie.min.js"></script>
+    <script src="js/angular_project.js"></script>
+    <script src="js/main.js"></script>
+    <script src="http://mbenford.github.io/ngTagsInput/js/ng-tags-input.min.js"></script>
+
+
+</body>
+
+</html>

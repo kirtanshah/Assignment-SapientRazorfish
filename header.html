@@ -1,0 +1,80 @@
+<section ng-controller="headerCtrl" class="animated fadeIn">
+<section>
+<div class="banner">
+<div class='logo'>
+	<img src='images/twobytes.svg'/>
+	<img src='images/consulting.svg'/>
+</div>
+<div class="topnav" id="myTopnav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <a href="#/!" class="active">Home</a>
+  <a href="#!aboutus">About Us</a>
+  <a href="#!jobs">JOBS</a>
+  <a href="#!clients">clients</a>
+  <a href="#!employer">Employers</a>
+  <a href="#!contact">Contact us</a>
+</div>
+<a href="javascript:void(0);" class="icon" onclick="openNav()" >
+    <i class="fa fa-bars">
+    	
+    </i>
+  </a>
+
+  <div class="search">
+  	<h3>I 'm looking for..</h3>
+  	<div class='form'>
+  	<input class="job" type="text" placeholder="Enter a Job Description" />
+	<button type="button" class="searchbtn searchbtnDesktop">
+	<i class="fa fa-search"></i>Search</button>
+	<div class="row2">
+  	<label class="container">Full time
+  		<input type="radio"  class="checky" checked="checked" name='radio'>
+  		<span class="checkmark"></span>
+	</label>
+	<label class="container">Part time/Casual/Freelance
+  		<input type="radio"  class="checky" checked="checked" name="radio">
+  		<span class="checkmark"></span>
+	</label>
+	
+<div class="styled-select blue semi-square">
+  <select>
+    <option>Select your location</option>
+    <option>INDIA</option>
+    <option>PAKISTAN</option>
+  </select>
+</div>
+<button type="button" class="searchbtn searchbtnMobile">
+	<i class="fa fa-search"></i>Search</button>
+  	</div>
+
+	
+</div>
+
+
+  </div>
+  <div class="register">
+  	<button type="button" class="searchbtn" id="myBtn" onclick='overlay()'>Register</button>
+</div>
+</div>
+</section>
+<section class="introduction">
+	<div class="headers">
+		<h4>We’re leaders in</h4>
+		<h1>Creative Digital Recruitment
+			<span></span>
+		</h1>
+	
+		<p>
+			Based in Surry Hills, the creative hub of Sydney we are surrounded by creativity
+and that reflects on the type of jobs we recruit for.
+		</p>
+	</div>
+	<button type="button" class="fintdout">
+		FIND OUT MORE ABOUT US!
+	</button>
+
+
+</section>
+<div  ng-include="'registration.html'"></div>
+</section>

@@ -1,0 +1,116 @@
+<section>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+    <div onclick="closespan()" class='close' ng-if="!flagforprofile">
+	<img class=""src='images/cross.svg'/>
+	
+    </div>
+    <div  ng-click="reset()" class='close' ng-if="flagforprofile">
+    <img class=""src='images/cross.svg'/>
+	
+    </div>
+      
+      <h2>Register</h2>
+    </div>
+    <div class="modal-body">
+      
+  
+  <form  class="css-form" name="myForm">
+  <div class="form1">
+  <div class="upload">
+	<img ng-src="{{user.imageSrc}}" ng-if="user.imageSrc" class="uploadimg"/>
+	<img src="images/profilepic.png" ng-if="!user.imageSrc" class="uploadimg"/>
+  	<label ng-model="user.imageSrc" ng-file-select="onFileSelect($files)" accept='image/*'>upload your photo<input type="file" accept='image/*' id="myfile" style="display: none;"></label>
+
+  </div>
+  <aside>
+  <div class="names">
+  	<input type="text" class="fname jobform" placeholder="First Name" ng-model='user.fname' ng-class="" required ng-pattern="/^[a-zA-Z]{1,20}$/" />
+  	<input type="text" class="lname jobform" placeholder="Last Name" ng-model='user.lname'/>
+  </div>
+  <div class="emails">
+  	<input type="email" class="jobform" placeholder="Email" ng-model='user.email'/>
+  </div>
+  <div class="mobile emails">
+  	<input type="text" class="jobform" placeholder="(541) 754-3010" ng-model='user.mobnumber'/>
+  </div>
+ <div class="slidecontainer">
+ <label>Age</label>
+  <input type="range" min="20" max="60" ng-model='user.age' value="0" class="slider" id="myRange"><span id="demo"></span>
+  
+</div>
+  <div class="selectDD">
+  <select ng-model="user.state" class="arrow">
+    <option value=''>State
+    <option value="Maharashtra">Maharashtra
+    <option value="Bihar">Bihar
+    <option value="Delhi">Delhi
+  </select>
+  <select ng-model="user.country" class="arrow">
+    <option value=''>Country
+    <option value="India">India
+    <option value="Nepal">Nepal
+    <option value="Usa">Usa
+  </select>
+  <select ng-model="user.address" class="arrow">
+    <option value=''>Address
+    <option value="Home">Home
+    <option value="Company">Company
+  </select>
+  </div>
+  <div class="Alladdress" ng-switch="user.address">
+  <div class="addtextbox emails" ng-switch-when="Home">
+  	<input type="text" class="jobform" ng-model="user.address1" placeholder="Address 1">
+  	<input type="text" class="jobform" ng-model="user.address2" placeholder="Address 2">
+  </div>
+  <div class="comPaddtextbox emails" ng-switch-when="Company">
+  	<input type="text" class="jobform" ng-model="user.comaddress1" placeholder="Company Address 1">
+  	<input type="text" class="jobform" ng-model="user.comaddress2" placeholder="Company Address 2">
+  </div>
+</div>
+<div class="tags1">
+  <tags-input ng-model="user.tags"></tags-input>
+</div>
+<div class="checkboxfinally">
+<label class="container">subscribe to newsletter
+      <input type="checkbox"  class="checky" checked="checked" name='checkbox' ng-model='user.checkbox'>
+      <span class="checkmark"></span>
+  </label>
+</div>
+ </aside>
+
+  </div>
+  <div class="subBtn">
+<button type="button" class="cancel" ng-if="!flagforprofile" onclick="closespan()">Cancel</button>
+<button type="button" class="cancel" ng-if="flagforprofile" ng-click="reset()">Cancel</button>
+<button type="button" class="sub" ng-disabled='!myForm.$valid' ng-click="myForm.$valid && submitForm(user)">Submit</button>
+</div>
+    
+  </form>
+  
+  
+
+      
+    </div>
+   
+  </div>
+
+</div>	
+</section>
+
+
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+
+	

@@ -1,0 +1,24 @@
+<div ng-include="'headerblue.html'"></div>
+<section ng-controller="profileCtrl" class="profile animated fadeIn">
+    <div class='profileData'>
+        <div class="row">
+            <h4>Profile</h4>
+            <img class="img" ng-if="user.imageSrc" ng-src="{{user.imageSrc}}" />
+            <img class="img1" src="images/profilepic.png" ng-if="!user.imageSrc" class="uploadimg" />
+            <div class="editbtn">
+                <button type="button" onclick="overlay()">Edit Profile</button>
+                <label ng-model="user.imageSrc" ng-file-select="onFileSelect($files)" accept='image/*'><span>Edit Photo</span><input type="file"  accept='image/*' style="display: none;"></label>
+            </div>
+
+
+        </div>
+        <div class="row1">
+            <p>I’m {{user.fname}} {{user.lname}} and Im above {{user.age}} years and you can send your emails to <span class="email">{{user.email}}</span>. I live in the state of {{user.state}}. I like to play {{user.tags[0].text}}, {{user.tags[1].text}} and reading {{user.tags[2].text}}. <span ng-if="user.checkbox">And please send me newsletters</span>. Please reach out to me on my phone number {{user.mobnumber}}. </p>
+            <button type="button"><a href="#/!">I agree</a></button>
+        </div>
+    </div>
+    <div ng-include="'registration.html'">
+
+    </div>
+
+</section>
