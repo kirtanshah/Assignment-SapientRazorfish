@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11" width="13" height="11">
+	<defs>
+		<image width="13" height="11" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAALCAMAAACTbPdTAAAA6lBMVEUAAAAYcJQYcJQZc5gZc5gadJgZcZUYcJQYcJQZc5gaeqIbf6gbfKQZdJo2hacaeJ8Zc5keeqAcg64ejbodiLUbfKUZc5gYcJR3rsUbf6kchK8cgasdhbEfjr0hl8kgk8MdibUbe6Mfd5uYwtMzkLcejbsfj70fkL8glMUhmcshmMk5kLR2rML///+RwdUejLohl8inzd3///8YcJQrgaUiiLIgk8IfkcBsr8v///////8uf6AZdp0bfaYfksIokr57t9D///////+51eFeor5ClrozkrpVpsh8uNH///////////////////++VNKIAAAATnRSTlMAQBCf/9Dw32BA////z8j/39P/////UDBr////////////tCTU////////yWsFY///UxWAefT//5QLKp3////qiiAvaZ+/1KqKSholND/kLeNwAAAAf0lEQVR4nGNggAJGJigNIphZWCE8NnYOBk4ubh5eMI+Pn19AUEhYRFRMHMiTkJSSlpGVk1dQVALylFVU1dQ1NLVUtXWAPF09fQNNTU0DfUMjBmMORhNTM01NLXMLSwYGK2sbWwU7OXl7B0eQkU7OLq5u7h6eXhD7LL19fK0gbADdlQ5qqHaLoQAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Twitterbird" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+</svg>

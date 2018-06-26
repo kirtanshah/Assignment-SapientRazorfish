@@ -1,0 +1,300 @@
+/* lg */
+ @media (max-width: 967px) {
+  .modal{
+    padding-top:0;
+  }
+     .banner{
+         background-position: center center;
+         min-height: 250px;
+         padding-bottom: 25px;
+    }
+     .topnav{
+         margin-top:10px;
+    }
+     .topnav a:not(:first-child) {
+        display: none;
+    }
+     .topnav a.icon {
+         float: right;
+         display: block;
+    }
+     .topnav.responsive {
+        position: absolute;
+    }
+     .topnav.responsive a.icon {
+         position: absolute;
+         right: 0;
+         top: 0;
+    }
+     .banner .icon{
+         display: block;
+    }
+     .topnav.responsive a {
+         float: none;
+         display: block;
+         text-align: right;
+    }
+     .responsive {
+         box-shadow: 0px 8px 20px #aaa;
+         height: 100%;
+        /* 100% Full-height */
+         width: 0;
+        /* 0 width - change this with JavaScript */
+         position: fixed;
+        /* Stay in place */
+         z-index: 1;
+        /* Stay on top */
+         top: 0;
+        /* Stay at the top */
+         left: 0;
+         background-color: #4a4a4a;
+        /* Black*/
+         overflow-x: hidden;
+        /* Disable horizontal scroll */
+         padding-top: 60px;
+        /* Place content 60px from the top */
+         transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidenav */
+    }
+    /* The navigation menu links */
+     .responsive a {
+         padding: 5px;
+         text-decoration: none;
+         font-size: 12px;
+         color: #fff;
+         display: block;
+         transition: 0.3s;
+    }
+    /* When you mouse over the navigation links, change their color */
+    /* Position and style the close button (top right corner) */
+     .responsive .closebtn {
+         position: absolute;
+         top: 0;
+         right: 0px;
+         font-size: 36px;
+         margin-left: 0px;
+         margin-top:10px;
+    }
+     .icon,.icon:hover{
+         color:#fff;
+         font-size: 36px;
+         padding:15px;
+    }
+     .banner .logo,.banner-blue .logo{
+         position: absolute;
+         margin-top: 0;
+         margin-left: 0;
+         left: 33%;
+         top: 3%;
+    }
+     .banner-blue .logo{
+         top:10%;
+    }
+     .banner .search{
+         margin:0 auto;
+         width:80%;
+    }
+     .banner .search h3{
+         font-size: 38px;
+        /* margin: 0 auto;
+         */
+         text-align: center;
+         margin-top: 20px;
+    }
+     .search .form{
+         width: 100%;
+         margin: 0 auto;
+    }
+     .search .job{
+         width: 100%;
+         margin-bottom: 26px;
+         margin-right: 0;
+         padding-left:10px;
+    }
+     .searchbtn{
+         display: none;
+    }
+     .row2{
+         margin: 0 auto;
+         display: block;
+         width: 250px;
+    }
+     .blue{
+         margin:25px auto;
+    }
+     .register{
+         margin-top:25px;
+         margin-bottom: 25px;
+    }
+     .register .searchbtn{
+         display: block;
+    }
+     .searchbtnMobile{
+         display: block;
+         margin:0 auto;
+    }
+    /******section2*******/
+     .introduction{
+         height: 505px;
+    }
+     .introduction .headers{
+         width:80%;
+         padding-top:50px;
+    }
+     .introduction h1{
+         font-size: 32px;
+    }
+     .introduction h4{
+         font-size: 20px;
+    }
+    .introduction p{
+         font-size: 16px;
+         margin-bottom: 40px;
+    }
+     .mail{
+         height: 280px;
+    }
+     .mail p{
+         width: 80%;
+         margin:0 auto;
+         padding-bottom: 20px;
+         padding-top:80px;
+    }
+     .mail.search .job{
+         width:80%;
+    }
+    /*****FOOTER********/
+     #footer{
+         height: 200px;
+    }
+     #footer .email{
+         padding:20px 20px 0 20px;
+         display: block;
+         margin:0 auto;
+         text-align: center;
+    }
+     #footer .copy{
+         padding-left: 0;
+    }
+     #footer .copy p{
+         display: block;
+         margin:0 auto;
+         padding-bottom: 25px;
+         width: 75%;
+         text-align: center;
+    }
+     #footer .tweet{
+         margin-left:20%;
+    }
+    /***Cutom Modal*********/
+     .modal-content{
+         width:95%;
+         min-height: 1350px;
+    }
+     .modal-body .css-form .form1{
+         display: block;
+         width: 80%;
+         padding-left:22px;
+    }
+     .modal-body .css-form{
+         padding-left: 0;
+    }
+     .modal-body .upload,.modal-body aside{
+         width: 100%;
+    }
+     .modal-body .upload{
+         margin: 0 auto;
+         margin-left: 27px;
+         margin-bottom: 20px;
+    }
+     .modal-body .css-form .form1 .fname{
+         width: 100%;
+         font-size: 16px;
+    }
+     .modal-body .css-form .form1 .jobform{
+         height: 40px;
+         margin-bottom: 10px;
+         font-size: 16px;
+    }
+     .jobform::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+         font-size: 16px;
+         line-height: 25px;
+    }
+     .jobform::-moz-placeholder {
+        /* Firefox 19+ */
+         font-size: 16px;
+         line-height: 25px;
+    }
+     .jobform:-ms-input-placeholder {
+        /* IE 10+ */
+         font-size: 16px;
+         line-height: 25px;
+    }
+     .jobform:-moz-placeholder {
+        /* Firefox 18- */
+         font-size: 16px;
+         line-height: 25px;
+    }
+     .modal-body .css-form .slidecontainer label{
+         font-size: 16px;
+    }
+     .modal-body .css-form .form1 .lname{
+         width: 100%;
+         margin: 0 auto;
+         margin-top: 8px;
+         font-size: 16px;
+    }
+     .modal-body .css-form .form1 .emails input, .modal-body .css-form .form1 .emails select{
+         width: 100%;
+         margin-top: 15px;
+         font-size: 16px;
+    }
+     .slidecontainer{
+         width: 100%;
+    }
+     .selectDD .arrow{
+         width: 100%;
+         height: 40px;
+         font-size: 16px;
+    }
+     .tags1{
+         width: 100%;
+    }
+     .modal-body .checkboxfinally label{
+         font-size: 13px;
+    }
+     .subBtn{
+         margin: 25px auto;
+         text-align: center;
+         display: block;
+         width: 100%;
+    }
+     .subBtn .cancel, .subBtn .sub{
+         margin-bottom: 20px;
+    }
+     .profileData{
+         display: block;
+         padding: 15px;
+    }
+     .profileData .img1{
+         width: 150px;
+         height: 151px;
+    }
+     .profileData h4{
+         text-align: center;
+    }
+     .profileData .row, .profileData .row1{
+         display: block;
+    }
+     .profileData .row1{
+         padding: 0;
+         width: 100%;
+         font-size: 16px;
+    }
+}
+/* md */
+ @media (min-width: 768px) and (max-width: 992px) {
+}
+ @media (min-width: 993px) and (max-width: 1200px) {
+}

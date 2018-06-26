@@ -1,0 +1,939 @@
+﻿ 
+/************************* *******Typography****** **************************/
+ @font-face {
+     font-family: Gotham Rounded;
+     src: url(../fonts/Gotham-Rounded-Light.otf);
+}
+ @font-face {
+     font-family: 'Helvetica Neue';
+     src: url(../fonts/HelveticaNeueMedium.ttf);
+}
+ @font-face {
+     font-family: 'Helvetica Neue bold';
+     src: url(../fonts/HelveticaNeuBold.ttf);
+}
+ @font-face {
+     font-family: 'Myriad Pro';
+     src: url(../fonts/MyriadPro-Regular.otf);
+}
+ body {
+     height:100%;
+     margin:0;
+}
+ ul li {
+     list-style: none;
+}
+ a:hover {
+     outline: none;
+     text-decoration:none;
+}
+ a:focus {
+     outline:none;
+     outline-offset: 0;
+}
+ a {
+     -webkit-transition: 300ms;
+     -moz-transition: 300ms;
+     -o-transition: 300ms;
+     transition: 300ms;
+}
+ h1, h2, h3, h4, h5, h6 {
+     font-family: 'Roboto', sans-serif;
+}
+ .btn:hover, .btn:focus{
+     outline: none;
+     box-shadow: none;
+}
+ .banner{
+     background: url('../images/banner.png') no-repeat;
+     background-size: cover;
+     background-position: center center;
+    /* background-attachment: fixed;
+     */
+     min-height: 852px;
+     position:relative;
+}
+/* .banner:after{
+     background: url('../images/separatorthree.png') no-repeat;
+     background-size: cover;
+     position: absolute;
+     bottom: 0;
+     height:1px;
+     width: 100%;
+}
+ */
+ .banner .logo,.banner-blue .logo{
+     display: inline-block;
+     margin-top: 80px;
+     margin-left: 168px;
+}
+ .banner .logo img,.banner-blue .logo img{
+     display: block;
+}
+ .banner-blue{
+     background: #3aa5dc;
+     height: 167px;
+     width: 100%;
+}
+/* Add a black background color to the top navigation */
+ .topnav {
+     background-color: transparent;
+     overflow: hidden;
+     width: 676px;
+     float: right;
+     margin-top:80px;
+}
+/* Style the links inside the navigation bar */
+ .topnav a {
+     font-family: Gotham Rounded;
+     display: inline-block;
+     text-align: right;
+     padding-top: 10px;
+     margin:10px;
+     margin-top:0;
+     text-decoration: none;
+     font-size: 14px;
+     line-height: 25px;
+     color: #fff;
+     font-weight: bold;
+     text-transform: uppercase;
+}
+ .banner .icon{
+     display: none;
+}
+/* Add an active class to highlight the current page */
+ .active,.topnav a:hover {
+     background: transparent;
+     border-top:4px solid #4acaff;
+}
+/* Hide the link that should open and close the topnav on small screens */
+ .topnav .icon,.topnav .closebtn {
+     display: none;
+}
+ .banner .search{
+     margin-left:150px;
+}
+ .banner .search h3{
+     font-size: 55px;
+     letter-spacing: -3px;
+     color: rgb(255,255,255);
+     font-family: Gotham Rounded;
+     font-style: italic;
+     margin: 0;
+     margin-top: 200px;
+}
+ .search .form{
+     width:966px;
+     margin-top:40px;
+}
+ .search .job{
+     height:50px;
+     width:740px;
+     background: #fff;
+     margin-top:48px;
+     display: inline-block;
+     font-size: 18px;
+     margin-right: 68px;
+     padding-left: 10px;
+}
+ .fa-search:before{
+     margin-right: 10px;
+}
+ .searchbtn{
+     width:138px;
+     font-size: 20px;
+     line-height: 25px;
+     color: rgb(255,255,255);
+     font-family: Gotham Rounded;
+     font-style: italic;
+     height: 56px;
+     background: #4acaff;
+     -webkit-appearance: button-bevel;
+     box-shadow: 0px 5px 0px 0px #3baedd;
+}
+ .job::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+     font-size: 18px;
+     color: rgb(199,199,199);
+     font-family: Gotham Rounded;
+     font-style: italic;
+     padding-left:15px;
+}
+ .job::-moz-placeholder {
+    /* Firefox 19+ */
+     font-size: 18px;
+     color: rgb(199,199,199);
+     font-family: Gotham Rounded;
+     font-style: italic;
+     padding-left:15px;
+}
+ .job:-ms-input-placeholder {
+    /* IE 10+ */
+     font-size: 18px;
+     color: rgb(199,199,199);
+     font-family: Gotham Rounded;
+     font-style: italic;
+     padding-left:15px;
+}
+ .job:-moz-placeholder {
+    /* Firefox 18- */
+     font-size: 18px;
+     color: rgb(199,199,199);
+     font-family: Gotham Rounded;
+     font-style: italic;
+     padding-left:15px;
+}
+/*******Custom checkbox*******/
+ .container {
+     display: block;
+     position: relative;
+     cursor: pointer;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     display: inline-block;
+     font-size: 13px;
+     line-height: 20px;
+     color: rgb(255,255,255);
+     font-family: Gotham Rounded;
+     font-style: italic;
+     margin-left:30px;
+     margin-right: 30px;
+}
+ .container .checky{
+     -webkit-appearance: none;
+}
+/* Hide the browser's default checkbox */
+ .container input {
+     position: absolute;
+     opacity: 0;
+     cursor: pointer;
+}
+/* Create a custom checkbox */
+ .checkmark {
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 15px;
+     width: 15px;
+     background-color: #fff;
+     margin-left:-28px;
+}
+/* When the checkbox is checked, add a blue background */
+ .container input:checked ~ .checkmark {
+     background-color: #fff;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+ .checkmark:after {
+     content: "";
+     position: absolute;
+     display: none;
+}
+/* Show the checkmark when checked */
+ .container input:checked ~ .checkmark:after {
+     display: block;
+}
+/* Style the checkmark/indicator */
+ .container .checkmark:after {
+     left: 4px;
+     top: -2px;
+     width: 5px;
+     height: 10px;
+     border: solid black;
+     border-width: 0 3px 3px 0;
+     -webkit-transform: rotate(45deg);
+     -ms-transform: rotate(45deg);
+     transform: rotate(45deg);
+}
+/*****Custom checkbox*******/
+/**Custom Select box******/
+ .styled-select {
+     background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 97% 33%;
+     height: 29px;
+     overflow: hidden;
+     width: 240px;
+     display: inline-block;
+     width: 255px;
+     height: 36px;
+     margin-left: 133px;
+     margin-top: 0px;
+    /* padding-top: 20px;
+     */
+}
+ .register{
+     margin-top:80px;
+    /* margin:80px auto;
+     */
+}
+ .register button{
+     margin:0 auto;
+     display: block;
+     font-style: normal;
+}
+ .searchbtnMobile{
+     display: none;
+}
+ .styled-select select {
+     background: transparent;
+     border: none;
+     font-size: 14px;
+     height: 29px;
+     padding: 5px;
+    /* If you add too much padding here, the options won't show in IE */
+     width: 268px;
+}
+ .styled-select select option{
+     color: #000;
+}
+ .blue {
+     background-color: #fff;
+}
+ .blue select {
+     color: #000;
+     height:38px;
+}
+ .row2{
+     display:flex;
+     margin-top:30px;
+}
+/*****SECTION2******/
+ .introduction{
+     height: 590px;
+     background: #f5f5f5;
+     text-align: center;
+}
+ .introduction .headers{
+     width: 720px;
+     margin:0 auto;
+     padding-top: 100px;
+}
+ .introduction h4{
+     font-size: 30px;
+     color: rgb(88,88,88);
+     font-family: Gotham Rounded;
+     font-style: italic;
+     margin-top:0;
+     margin-bottom: 25px;
+}
+ .introduction h1{
+     font-size: 45px;
+     margin-top:0;
+     color: rgb(88,88,88);
+     font-family: Gotham Rounded;
+     margin-bottom: 45px;
+}
+ .introduction h1 span{
+     width:138px;
+     color:#4acaff;
+     padding-bottom: 40px;
+     border-bottom: 4px solid;
+     display: block;
+     margin: 0 auto;
+}
+ .introduction p{
+     font-size: 18px;
+     color: rgb(88,88,88);
+     font-family: Gotham Rounded;
+     text-align: center;
+     margin-top:0;
+     margin-bottom: 85px;
+}
+ .introduction .fintdout{
+     font-size: 15px;
+     color: rgb(74,202,255);
+     font-family: Gotham Rounded;
+     text-align: center;
+     height: 60px;
+     width: 280px;
+     border-radius: 4px;
+     border:2px solid;
+     background: transparent;
+     margin:0 auto;
+}
+ .mail{
+     height: 442px;
+     background: #131c25;
+     text-align: center;
+}
+ .mail p{
+     margin:0;
+     font-size: 18px;
+     padding-top:160px;
+     color: rgb(255,255,255);
+     font-family: Gotham Rounded;
+     margin-bottom: 35px;
+}
+ .mail.search .job{
+     background: transparent;
+     width:362px;
+     border-radius: 4px;
+     border:2px solid rgb(74,202,255);
+     margin:0 auto;
+     background: url(../images/mail.png) no-repeat;
+     background-position: 95% 20px;
+     color: #fff;
+     padding-left: 10px;
+}
+ .mail.search .job::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+     font-size: 14px;
+     color: rgb(255,255,255);
+     font-family: Gotham Rounded;
+     font-style: italic;
+     padding-left:15px;
+}
+ .mail.search .job::-moz-placeholder {
+    /* Firefox 19+ */
+     font-size: 14px;
+     color: rgb(255,255,255);
+     font-family: Gotham Rounded;
+     font-style: italic;
+     padding-left:15px;
+}
+ .mail.search .job:-ms-input-placeholder {
+    /* IE 10+ */
+     font-size: 14px;
+     color: rgb(255,255,255);
+     font-family: Gotham Rounded;
+     font-style: italic;
+     padding-left:15px;
+}
+ .mail.search .job:-moz-placeholder {
+    /* Firefox 18- */
+     font-size: 14px;
+     color: rgb(255,255,255);
+     font-family: Gotham Rounded;
+     font-style: italic;
+     padding-left:15px;
+}
+/**********Footer********/
+ #footer{
+     height: 148px;
+     background: #f5f5f5;
+}
+ #footer .email{
+     padding-top: 65px;
+     padding-left: 150px;
+     display: flex;
+}
+ #footer a {
+     font-size: 14px;
+     color: rgb(122,122,122);
+     font-family: Gotham Rounded;
+     text-decoration: none;
+     padding-left: 15px;
+}
+ #footer .copy{
+     padding-top:25px;
+     padding-left:150px;
+}
+ #footer .copy p{
+     font-size: 14px;
+     color: rgb(166,165,165);
+     font-family: Gotham Rounded;
+     display: inline-block;
+     margin:0;
+     width: 62%;
+     text-align: left;
+}
+ #footer .tweet,#footer .fb{
+     font-size: 12px;
+     line-height: 15px;
+     color: rgb(24,100,135);
+     font-family: 'Helvetica Neue';
+     box-shadow: 0.5px 0.866px 0px rgba(255,255,255,0.61);
+     border: 1px solid;
+     width: 55px;
+     text-align: right;
+     background: url('../images/Twitterbird.svg') no-repeat;
+     border-radius: 3px;
+     background-position: 2px 2px;
+     padding-right: 4px;
+     display: inline-block;
+     margin-right: 7px;
+}
+ #footer .fb{
+     font-size: 11px;
+     letter-spacing: 0px;
+     color: rgb(59,89,152);
+     font-family: "Lucida Grande";
+     box-shadow: 0.5px 0.866px 0px rgba(255,255,255,0.61);
+     background: url('../images/Facebook.png') no-repeat;
+     background-position: 8px 1px;
+     width: 48px;
+}
+ #footer .tweetcount , #footer .fbcount{
+     display: inline-block;
+     font-size: 12px;
+     letter-spacing: 0px;
+     line-height: 15px;
+     color: rgb(42,112,144);
+     font-family: "Helvetica Neue bold";
+     font-weight: bold;
+     margin-left: 10px;
+     background-color: #fff;
+     padding-right: 2px;
+}
+ .count{
+     position: relative;
+     background: #fff;
+     border-radius: 4px;
+     min-height: 18px;
+     min-width: 15px;
+     text-align: center;
+     display: inline-block;
+     border:1px solid #e5e5e5;
+     margin-right: 16px;
+}
+ #footer .count i{
+     position: absolute;
+     zoom: 1;
+     line-height: 0;
+     width: 0;
+     height: 0;
+     left: 0;
+     top: 50%;
+     margin: -4px 0 0 -4px;
+     border: 4px transparent solid;
+     border-right-color: #fff;
+     border-left: 0;
+}
+ #footer .count u{
+     margin-left: -3px;
+     border-right-color: #fff;
+}
+/****Custom Modal****/
+/* The Modal (background) */
+ .modal {
+     display: none;
+    /* Hidden by default */
+     position: fixed;
+    /* Stay in place */
+     z-index: 1;
+    /* Sit on top */
+     padding-top: 100px;
+    /* Location of the box */
+     left: 0;
+     top: 0;
+     width: 100%;
+    /* Full width */
+     height: 100%;
+    /* Full height */
+     overflow: auto;
+    /* Enable scroll if needed */
+     background-color: rgb(0,0,0);
+    /* Fallback color */
+     background-color: rgba(0,0,0,0.4);
+    /* Black w/ opacity */
+}
+/* Modal Content */
+ .modal-content {
+     position: relative;
+     background-color: #fefefe;
+     margin: auto;
+     padding: 0;
+     border: 1px solid #888;
+     width: 62%;
+     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+     -webkit-animation-name: animatetop;
+     -webkit-animation-duration: 0.4s;
+     animation-name: animatetop;
+     animation-duration: 0.4s;
+     min-height: 1250px;
+}
+/* Add Animation */
+ @-webkit-keyframes animatetop {
+     from {
+        top:-300px;
+         opacity:0
+    }
+     to {
+        top:0;
+         opacity:1
+    }
+}
+ @keyframes animatetop {
+     from {
+        top:-300px;
+         opacity:0
+    }
+     to {
+        top:0;
+         opacity:1
+    }
+}
+/* The Close Button */
+ .close {
+     color: white;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+     height: 30px;
+     width: 30px;
+     padding-top: 30px;
+     padding-right: 30px;
+}
+ .close img{
+     padding: 10px;
+     background: #60b6e2;
+     border-radius: 50%;
+}
+ .close:hover, .close:focus {
+     color: #000;
+     text-decoration: none;
+     cursor: pointer;
+}
+ .modal-header {
+     background-color: #3aa5dc;
+     color: white;
+     height: 92px;
+}
+ .modal-header h2{
+     margin:0;
+     font-size: 32px;
+     line-height: 32px;
+     color: rgb(255,255,255);
+     font-family: "Myriad Pro";
+     font-weight: 400;
+     padding-top: 30px;
+     padding-left: 30px;
+}
+ .modal-body {
+     background: #fff;
+}
+ .modal-body img{
+     height: 151px;
+     width: 150px;
+     background: #f5f5f5;
+}
+.modal-body .css-form{
+     padding-top:35px;
+     padding-left:30px;
+}
+ .modal-body .css-form .form1{
+     display: flex;
+}
+ .modal-body .css-form .form1 .jobform{
+     height: 54px;
+     border:1px solid #e5e5e5;
+     border-radius:4px;
+     margin-bottom: 25px;
+     font-size: 25px;
+     padding-left:15px;
+}
+ .modal-body .css-form .form1 .fname{
+     width:245px;
+}
+ .modal-body .css-form .form1 .lname{
+     width:160px;
+     margin-left: 20px;
+}
+ .modal-body .css-form .form1 .emails input,.modal-body .css-form .form1 .emails select{
+     width:444px;
+}
+ .modal-body .css-form label{
+     display: block;
+     padding-top:18px;
+     font-size: 18px;
+     line-height: 18px;
+     color: rgb(58,165,220);
+     font-family: "Myriad Pro";
+     text-align: left;
+     font-weight: 400;
+     padding-left:5px;
+     cursor:pointer;
+}
+ .modal-body .upload{
+     width:32%;
+}
+ .modal-body aside{
+     width: 68%;
+}
+ .jobform::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+     font-size: 25px;
+     line-height: 30px;
+     color: rgb(195,193,193);
+     font-family: "Myriad Pro";
+     padding-left:15px;
+}
+ .jobform::-moz-placeholder {
+    /* Firefox 19+ */
+     font-size: 25px;
+     line-height: 30px;
+     color: rgb(195,193,193);
+     font-family: "Myriad Pro";
+     padding-left:15px;
+}
+ .jobform:-ms-input-placeholder {
+    /* IE 10+ */
+     font-size: 25px;
+     line-height: 30px;
+     color: rgb(195,193,193);
+     font-family: "Myriad Pro";
+     padding-left:15px;
+}
+ .jobform:-moz-placeholder {
+    /* Firefox 18- */
+     font-size: 25px;
+     line-height: 30px;
+     color: rgb(195,193,193);
+     font-family: "Myriad Pro";
+     padding-left:15px;
+}
+/********Custom Slider***********/
+ .slidecontainer {
+     width: 444px;
+}
+ .modal-body .css-form .slidecontainer label{
+     padding-top:0;
+     font-size: 25px;
+     line-height: 25px;
+     color: rgb(195,193,193);
+     font-family: "Myriad Pro";
+}
+ .slider:after{
+     content:'60';
+     color:rgb(195,193,193);
+     font-size:16px;
+     top: 12px;
+     position: relative;
+}
+ #demo{
+     color:rgb(195,193,193);
+     margin-top:7px;
+     display: block;
+}
+ .slider {
+     -webkit-appearance: none;
+     width: 100%;
+     height: 2px;
+     border-radius: 5px;
+     background: #d3d3d3;
+     outline: none;
+}
+ .slider:hover {
+     opacity: 0.7;
+}
+ .slider::-webkit-slider-thumb {
+     -webkit-appearance: none;
+     appearance: none;
+     width: 20px;
+     height: 20px;
+     border-radius: 50%;
+     background: #a5acaf;
+     cursor: pointer;
+}
+ .slider::-moz-range-thumb {
+     width: 20;
+     height: 20;
+     border-radius: 50%;
+     background: #a5acaf;
+     cursor: pointer;
+}
+/*****************/
+ .selectDD .arrow{
+     background: url(../images/arrow.png) no-repeat 96% 48%;
+     background-size: 16px;
+     color: #4a4a4a;
+     border-radius: 4px;
+     margin-bottom: 25px;
+     -webkit-appearance:none;
+     height: 58px;
+     width:458px;
+     display: block;
+     border:1px solid #e5e5e5;
+     font-size: 25px;
+     padding-left: 15px;
+}
+ .selectDD .arrow:first-child{
+     margin-top:15px;
+}
+ .selectDD .arrow option{
+     color: #4a4a4a;
+     font-size: 25px;
+}
+ .tags1{
+     width:459px;
+     height: 60px;
+}
+ tags-input .tags{
+     border: 1px solid #e5e5e5;
+     box-shadow: none;
+     height: 100%;
+     border-radius: 4px;
+}
+ .tags1 {
+     width: 459px;
+     height: 60px;
+}
+ tags-input{
+     height: 60px;
+}
+ tags-input .tags .tag-item{
+     background: #8996a0;
+     font-size: 16px;
+     color: #fff;
+     height: 30px;
+     margin-top: 14px;
+}
+ tags-input .tags .input{
+     border: 0;
+     outline: 0;
+     margin: 15px 2px;
+     padding: 0 0 0 5px;
+     float: left;
+     height: 30px;
+    /* font: 18px "Myriad Pro";
+     */
+     width: 100px!important;
+}
+ tags-input .tags .tag-item .remove-button{
+     font: 400 24px Arial,sans-serif;
+     color: #ffcc33;
+}
+ .subBtn{
+     width: 400px;
+    /* float: right;
+     */
+     text-align: right;
+     margin-left: 311px;
+     margin-top: 40px;
+}
+ .subBtn .cancel,.subBtn .sub{
+     height: 56px;
+     width: 154px;
+     background: transparent;
+     border: 1px solid #e5e5e5;
+     border-radius: 4px;
+     font-size: 25px;
+     line-height: 25px;
+     color: rgb(134,134,134);
+     font-family: "Source Sans Pro";
+}
+ .subBtn .sub{
+     color:#fff;
+     background: #3aa5dc;
+}
+ .modal-body .container input:checked ~ .checkmark,.modal-body .checkmark{
+     background-color: #999ea2;
+     top: 18px;
+}
+ .modal-body .checkboxfinally label{
+     font-size: 25px;
+     line-height: 18px;
+     color: rgb(195,193,193);
+     font-family: "Myriad Pro";
+     font-style: normal;
+}
+/****************Profile**********/
+ .profileData{
+     padding:84px 147px;
+     display: flex;
+}
+ .profileData img{
+     width: 300px;
+     height: 302px 
+}
+ .profileData .img1{
+     border:1px solid #e5e5e5;
+}
+ .profileData .row,.profileData .row1{
+     display: inline-block;
+}
+ .profileData .row1{
+     padding-top:84px;
+     padding-left:65px;
+     width: 550px;
+     height: 217px;
+     font-size: 26px;
+     color: rgb(102,102,102);
+     font-family: "Myriad Pro";
+}
+ .row1 p .email{
+     color:#3aa5dc;
+}
+ .row1 button{
+     height:50px;
+     height: 54px;
+     width: 134px;
+     font-size: 20px;
+     line-height: 25px;
+     color: rgb(255,255,255);
+     font-family: "Myriad Pro";
+     background: #49a942;
+     -webkit-appearance: button-bevel;
+}
+ .row1 button a{
+     text-decoration: none;
+     color: #fff;
+     font-size: 20px 
+}
+ .profileData h4{
+     margin-top:0;
+     margin-bottom: 50px;
+     font-size: 32px;
+     color: rgb(58,165,220);
+     font-family: "Myriad Pro";
+}
+ .profileData .editbtn{
+     margin-top: 15px 
+}
+ .profileData .editbtn button,.profileData .editbtn label{
+     height: 53px;
+     width: 140px;
+     -webkit-appearance: none;
+     font-size: 20px;
+     line-height: 25px;
+     color: rgb(102,102,102);
+     font-family: "Myriad Pro";
+     background: #ffcc33;
+     box-shadow: none;
+     -webkit-appearance: button-bevel;
+     box-shadow: 0px 5px 0px 0px #cc7a00;
+}
+ .profileData .editbtn label{
+     position: relative;
+     top: -51px;
+     display: flex;
+     right: -168px;
+}
+ .profileData .editbtn label span{
+     display: block;
+     padding: 12px 26px;
+}
+ .fname.ng-invalid{
+     border:1px solid red!important;
+}
+ .fname.ng-invalid.ng-untouched{
+     border:1px solid #e5e5e5!important;
+}
+ button,a{
+     cursor:pointer;
+}
+ button[disabled] {
+     cursor: no-drop;
+}
+ .extra h1{
+     text-align: center;
+     color: #4a4a4a;
+     font-size: 32px;
+}
+ .extra a{
+     text-align: center;
+    /* margin: 0 auto;
+     */
+     display: block;
+     height: 50px;
+    /* width: 100px;
+     */
+     color: #aaa;
+     font-size: 19px;
+     margin-top: 50px;
+}
+ .introduction .fintdout:hover {
+     color: #fff;
+     background: rgb(74,202,255);
+     border-color: rgb(74,202,255);
+}
